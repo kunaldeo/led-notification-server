@@ -2,6 +2,7 @@
 
 Welcome to the alpha release of **LED Notification Server**. This software allows you to show notifications on LED matrix panels.
 
+*Pull Requests welcome*
 
 **Current Features**
 
@@ -14,7 +15,7 @@ Welcome to the alpha release of **LED Notification Server**. This software allow
 **Planned Features**
 
 * Support for iOS Notifications
-* Dynamic rendering for other resolutions: Help Needed
+* Dynamic rendering for other resolutions: **Help Needed**
 * Support for higher resolutions
 
 ## How it Looks
