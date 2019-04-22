@@ -1,6 +1,8 @@
 from PIL import Image
 from PIL import ImageFont
 
+from plexobject import settings
+
 
 def text_wrap(text, font, max_width):
     lines = []
@@ -36,8 +38,8 @@ def split_lines(text):
     image_size = img.size
 
     # create the ImageFont instance
-    font_file_path = 'Roboto-Regular.ttf'
-    font = ImageFont.truetype(font_file_path, size=11, encoding="unic")
+    font_file_path = settings.FONT_NAME
+    font = ImageFont.truetype(font_file_path, size=settings.FONT_SIZE, encoding="unic")
 
     # get shorter lines
     lines = text_wrap(text, font, image_size[0])
