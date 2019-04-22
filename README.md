@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the alpha release of **LED Notification Server**.
+Welcome to the alpha release of **LED Notification Server**. This software allows you to show notifications on LED matrix panels.
 
 
 **Current Features**
@@ -9,7 +9,7 @@ Welcome to the alpha release of **LED Notification Server**.
 * Display Plex On Screen Display on playback
    * Movie Information including Director, Rating and File format
    * TV information like season, episode name etc. 
-* Output resolution of 128x128
+* Output resolution of 128x128 using 4 64x64 Matrix panel
 
 **Planned Features**
 
@@ -129,14 +129,14 @@ If you are not using Plex you can ignore all plex related instructions
 
 
     ```
-    $ git clone https://github.com/kunaldeo/plex-osd
+    $ git clone https://github.com/kunaldeo/led-notification-server
     ```
 
 2. Create a python virtualenv and install the dependencies
 
    ```
    $ sudo python3 -m pip install virtualenv # Optional step, if you have virtualenv skip it
-   $ cd plex-osd
+   $ cd led-notification-server
    $ python3 -m virtualenv -p /usr/bin/python3 venv
    $ source venv/bin/activate
    $ pip install -r requirements.txt
