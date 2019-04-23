@@ -158,21 +158,20 @@ If you are not using Plex you can ignore all plex related instructions
 
 4. Edit the run scripts
     * For Plex Notifcations, edit `PLEX_OUTPUT_SCRIPT_PATH` file. Substitute the values under < >.
-
-         
+    
     ```
     #!/bin/bash
     cat <PLEX_OUTPUT_IMAGE_PATH> | stdbuf -o64k pnmscale -xysize 128 128 | socat -b64000 STDIO UDP-SENDTO:<Pi IP Address>:1337
 echo "Image Displayed.."
     ```
+    
     * For Android Notifcations, edit `NOTIFICATION_OUTPUT_SCRIPT_PATH ` file. Substitute the values under < >.
-
+    
     ```
     #!/bin/bash
     cat <NOTIFICATION_OUTPUT_IMAGE_PATH> | stdbuf -o64k pnmscale -xysize 128 128 | socat -b64000 STDIO UDP-SENDTO:<Pi IP Address>:1337
-echo "Image Displayed.."
+    echo "Image Displayed.."
     ```
-
 
 5. Run the server. Note the IP address of the server.
    
