@@ -99,7 +99,6 @@ If you are not using Plex you can ignore all plex related instructions
 	```
 5. Create ```/etc/systemd/system/led.service``` with the following contents
 
-    
     ```
     [Unit]
     Description=Led Service
@@ -114,7 +113,7 @@ If you are not using Plex you can ignore all plex related instructions
     [Install]
     WantedBy=multi-user.target
     ```
-    *Verify all the paths*
+*Verify all the paths*
 6. Enable and start the service
 
     ```
@@ -127,7 +126,6 @@ If you are not using Plex you can ignore all plex related instructions
 ### C. Setting up LED Notification Server
 
 1. Clone this repository
-
 
     ```
     $ git clone https://github.com/kunaldeo/led-notification-server
@@ -162,7 +160,7 @@ If you are not using Plex you can ignore all plex related instructions
     ```
     #!/bin/bash
     cat <PLEX_OUTPUT_IMAGE_PATH> | stdbuf -o64k pnmscale -xysize 128 128 | socat -b64000 STDIO UDP-SENDTO:<Pi IP Address>:1337
-echo "Image Displayed.."
+    echo "Image Displayed.."
     ```
     
     * For Android Notifcations, edit `NOTIFICATION_OUTPUT_SCRIPT_PATH ` file. Substitute the values under < >.
