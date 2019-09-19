@@ -15,6 +15,7 @@ def process_notification(request):
     title = data['title']
     message = ''
     app_name = data['appName']
+    large_icon_data = ""
     if data['bigText']:
         message = data['bigText']
 
@@ -26,7 +27,9 @@ def process_notification(request):
     if data['subText']:
         message = '{} {}'.format(message, data['subText'])
     message = message.replace('\n', ' ').replace('\r', ' ')
-    large_icon_data = data['largeIcon']['data'].encode('utf-8')
+    if 'data' in data['largeIcon']:
+        large_icon_data = data['largeIcon']['data'].encode('utf-8')
+
     app_icon_data = data['appIcon']['data'].encode('utf-8')
     # small_icon_data = data['smallIcon']['data'].encode('utf-8')
     image = Image.open('bg.jpg')
